@@ -370,7 +370,7 @@ if analyze_all_btn:
             if tradeable()[1] == buy or tradeable()[1] == new_high:
                 table={'Name:':tradeable()[0],'Trade Recommendation:':tradeable()[1],'Last Price:':tradeable()[2],'Earn Potential:':tradeable()[3],'Loss Potential:':tradeable()[4],'Target Sales Price:':tradeable()[5],'Stop-Loss:':tradeable()[6]}
                 newDf=pd.Series(table)
-                st.title(ticker)
+                st.success(ticker)
                 # st.success(newDf[1])
                 st.write(newDf)
             else:
