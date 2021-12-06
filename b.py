@@ -14,10 +14,10 @@ Crypto Analyst
 """)
 subheader = '<p style="font-family:Courier; color:red; font-size: 20px;">Your Technical Analsyt for Cryto Currencies</p>'
 st.markdown(subheader, unsafe_allow_html=True)
-CrList=pd.read_csv("docs/Cr_List.csv")
+CrList=pd.read_csv("docs/crList.csv")
 # ticker=CrList["Ticker"][0]
 # ticker="BTC-USD"
-tickers=CrList["Ticker"]
+tickers=CrList["Symbol"]
 user_input=st.selectbox("Coin Name",tickers,index=0,help="Please choose the coin you want to analyze.")
 ticker=user_input
 ticker_names=CrList["Name"]
@@ -281,7 +281,7 @@ elif fiveM_btn:
     else:
         st.error(newDf[1])
     st.write(newDf)
-st.subheader("Today's Buy List")
+st.subheader("Today's Buy List From Top 100 Coins")
 #Analyze ALL
 analyze_all_btn = st.button('Buy List')
 if analyze_all_btn:
@@ -291,7 +291,7 @@ if analyze_all_btn:
     for i in tickers:
         try:
             ticker = i
-            ticker_data=yf.download(ticker,period="1y")
+            ticker_data=yf.download(ticker,period="max")
             df=pd.DataFrame(ticker_data)
             # for percent_complete in range(100):
             #     time.sleep(0)
