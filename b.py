@@ -379,6 +379,5 @@ if analyze_all_btn:
             pass
     analzye_finished = '<p style="font-family:Courier; color:red; font-size: 20px;">Finished</p>'
     st.markdown(analzye_finished, unsafe_allow_html=True)
-    st.caption("Today's buy list")
     delete_button = st.button('Clear')
 
