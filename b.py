@@ -20,7 +20,7 @@ CrList=pd.read_csv("docs/crList.csv")
 tickers=CrList["Symbol"]
 ticker_names=CrList["Name"]
 blank_space="   -   "
-user_input=st.selectbox("Coin Name",tickers+(blank_space)+ticker_names,index=0,help="Please choose the coin you want to analyze.")
+user_input=st.selectbox("Coin Name",tickers,index=0,help="Please choose the coin you want to analyze.")
 ticker=user_input
 with st.container():
     col1, col2, col3, col4 = st.columns(4)
