@@ -18,9 +18,10 @@ CrList=pd.read_csv("docs/crList.csv")
 # ticker=CrList["Ticker"][0]
 # ticker="BTC-USD"
 tickers=CrList["Symbol"]
-user_input=st.selectbox("Coin Name",tickers,index=0,help="Please choose the coin you want to analyze.")
-ticker=user_input
 ticker_names=CrList["Name"]
+blank_space="   -   "
+user_input=st.selectbox("Coin Name",tickers+(blank_space)+ticker_names,index=0,help="Please choose the coin you want to analyze.")
+ticker=user_input
 with st.container():
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -462,7 +463,7 @@ if analyze_all_btn:
                 pass
         except KeyError:
             pass
-    analzye_finished = '<p style="font-family:Courier; color:red; font-size: 20px;">Finished</p>'
+    analzye_finished = '<p style="font-family:Courier; color:red; font-size: 20px;">Analiz Bitti!</p>'
     st.markdown(analzye_finished, unsafe_allow_html=True)
     st.caption("Today's buy list")
     delete_button = st.button('Clear')
