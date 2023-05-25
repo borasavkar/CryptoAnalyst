@@ -60,7 +60,7 @@ if daily_btn:
         new_high=str(recommendationList[1])
         buy=str(recommendationList[2])
         dontBuy=str(recommendationList[3])
-        @st.cache
+        @st.cache_data
         def tradeable():
             if (last_price<min10):
                 str_ticker=str("{}".format(ticker))
@@ -161,7 +161,7 @@ elif hour_btn:
         new_high=str(recommendationList[1])
         buy=str(recommendationList[2])
         dontBuy=str(recommendationList[3])
-        @st.cache
+        @st.cache_data
         def tradeable():
             if (last_price<min10):
                 str_ticker=str("{}".format(ticker))
@@ -262,7 +262,7 @@ elif fiveM_btn:
         new_high=str(recommendationList[1])
         buy=str(recommendationList[2])
         dontBuy=str(recommendationList[3])
-        @st.cache
+        @st.cache_data
         def tradeable():
             if (last_price<min10):
                 str_ticker=str("{}".format(ticker))
@@ -363,7 +363,7 @@ elif oneM_btn:
         new_high=str(recommendationList[1])
         buy=str(recommendationList[2])
         dontBuy=str(recommendationList[3])
-        @st.cache
+        @st.cache_data
         def tradeable():
             if (last_price<min10):
                 str_ticker=str("{}".format(ticker))
@@ -484,7 +484,7 @@ if daily_btn_all:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
@@ -591,7 +591,7 @@ elif hour_btn_all:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
@@ -698,7 +698,7 @@ elif fiveM_btn_all:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
@@ -805,7 +805,7 @@ elif oneM_btn_all:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
@@ -928,7 +928,7 @@ if daily_btn_strong:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
@@ -1035,7 +1035,7 @@ elif hour_btn_strong:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
@@ -1142,7 +1142,7 @@ elif fiveM_btn_strong:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
@@ -1249,7 +1249,7 @@ elif oneM_btn_strong:
             new_high=str(recommendationList[1])
             buy=str(recommendationList[2])
             dontBuy=str(recommendationList[3])
-            @st.cache
+            @st.cache_data
             def tradeable():
                 if (last_price<min10):
                     str_ticker=str("{}".format(ticker))
